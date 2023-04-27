@@ -107,9 +107,9 @@ img {
 }
 
 /**
-  |========================================
-  |                    Хедер
-  |========================================
+  |==================================================
+  |                    Хедер на навігація
+  |==================================================
 */
 
 .header {
@@ -120,6 +120,36 @@ img {
   display: flex;
   align-items: center;
 }
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: 332px;
+}
+
+.site-nav.list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.site-nav .link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  font-weight: 500;
+  color: var(--color-navy);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .link:active {
+  color: var(--acent-color-active);
+}
+/*
+.site-nav .link.current {
+  color: var(--acent-color);
+} */
 
 .address {
   font-weight: inherit;
@@ -186,41 +216,6 @@ img {
 .logo:focus {
   color: var(--acent-color-active);
 }
-
-/**
-  |===================================
-  |               Навігація
-  |===================================
-*/
-.nav {
-  display: flex;
-  align-items: center;
-  margin-right: 332px;
-}
-
-.site-nav.list {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.site-nav .link {
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  font-weight: 500;
-  color: var(--color-navy);
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link:active {
-  color: var(--acent-color-active);
-}
-/*
-.site-nav .link.current {
-  color: var(--acent-color);
-} */
 
 /**
   |===================================
@@ -383,8 +378,38 @@ img {
 }
 
 /**
+|========================================
+|          Кнопки галереї робіт
+|========================================
+*/
+.category.list {
+  margin-bottom: 72px;
+  --items: 5;
+  justify-content: center;
+  align-items: center;
+}
+.btn.gallery {
+  padding: 12px 24px;
+  border: 1px solid var(--color-cornflower);
+  border-radius: 4px;
+
+  color: var(--acent-color);
+  background-color: var(--background-color-gris);
+}
+
+.btn.gallery:hover,
+.btn.gallery:focus {
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: var(--color-text-white);
+  background-color: var(--acent-color-active);
+}
+
+/**
 |==========================================
-|                    Галерея
+|                    Галерея робіт
 |==========================================
 */
 
@@ -404,7 +429,7 @@ img {
 .gallery-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border: 1px solid var(--background-color-gris);
+  /*border: 1px solid var(--background-color-gris);*/
 }
 /*.gallery-item:nth-child(3n + 3) {
   margin-right: 0px;
@@ -428,34 +453,6 @@ img {
 
 /**
 |========================================
-|          Кнопки галереї робіт
-|========================================
-*/
-.category.list {
-  margin-bottom: 72px;
-  --items: 5;
-  justify-content: center;
-  align-items: center;
-}
-.btn.gallery {
-  padding: 12px 24px;
-  border: 1px solid var(--color-cornflower);
-  border-radius: 4px;
-
-  color: var(--acent-color);
-  background-color: var(--background-color-gris);
-}
-
-.btn.gallery:hover,
-.btn.gallery:focus {
-  border: 1px solid transparent;
-
-  color: var(--color-text-white);
-  background-color: var(--acent-color-active);
-}
-
-/**
-|========================================
 |                 Підвал
 |========================================
 */
@@ -466,7 +463,16 @@ img {
 
   background-color: var(--background-color-dark);
 }
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 .footer.text {
   width: 264px;
   color: var(--color-text-footer);
+}
+
+.media-text {
+  font-weight: 500;
+  color: var(--background-color-white);
 }
